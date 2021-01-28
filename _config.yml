@@ -1,2 +1,18 @@
+title: Jekyll Zendesk Garden
+description: A Jekyll theme using the Zendesk Garden design patterns
+
+permalink: pretty
+
+exclude:
+  - node_modules
+  - "*.gemspec"
+  - "*.gem"
+  - LICENSE.txt
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+
 plugins:
   - jekyll-postcss
