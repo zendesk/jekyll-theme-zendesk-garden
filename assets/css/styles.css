@@ -1,0 +1,32 @@
+---
+---
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset font element sizes to support Markdown better */
+h1 {
+  @apply text-4xl;
+  @apply my-4;
+}
+
+h2 {
+  @apply text-3xl;
+  @apply my-3;
+}
+
+h3 {
+  @apply text-2xl;
+  @apply my-2;
+}
+
+h4 {
+  @apply text-xl;
+  @apply my-1;
+}
+
+h5 {
+  @apply text-lg;
+  @apply my-px;
+}

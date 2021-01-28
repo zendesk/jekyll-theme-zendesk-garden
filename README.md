@@ -1,24 +1,35 @@
-# zendesk-github-pages-theme
+---
+layout: default
+---
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+# jekyll-theme-zendesk-garden
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+A Jekyll theme using Zendesk Garden design patterns.
 
-TODO: Delete this and the text above, and describe your gem
+This is possible thanks to the following awesome libraries:
 
+- [`jekyll-postcss` plugin](https://github.com/mhanberg/jekyll-postcss)
+- [`tailwind-css` as a PostCSS plugin](https://tailwindcss.com/docs/installation#add-tailwind-as-a-post-css-plugin)
+- [zendeskgarden/tailwindcss](https://github.com/zendeskgarden/tailwindcss)
+
+## Usage
+
+### GitHub Pages
+
+TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
 
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "zendesk-github-pages-theme"
+gem "jekyll-theme-zendesk-garden"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: zendesk-github-pages-theme
+theme: jekyll-theme-zendesk-garden
 ```
 
 And then execute:
@@ -27,11 +38,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install zendesk-github-pages-theme
-
-## Usage
-
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+    $ gem install jekyll-theme-zendesk-garden
 
 ## Contributing
 
@@ -44,9 +51,10 @@ To set up your environment to develop this theme, run `bundle install`.
 Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `zendesk-github-pages-theme.gemspec` accordingly.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-zendesk-garden.gemspec` accordingly.
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+Copyright 2021 Zendesk
 
+Licensed under the [Apache License, Version 2.0](LICENSE.txt)

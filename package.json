@@ -1,0 +1,20 @@
+{
+  "name": "jekyll-theme-zendesk-garden",
+  "version": "0.1.0",
+  "description": "A Jekyll theme using the Zendesk Garden design patterns.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zendesk/jekyll-theme-zendesk-garden.git"
+  },
+  "author": "Craig Day",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/zendesk/jekyll-theme-zendesk-garden#readme",
+  "devDependencies": {
+    "@zendeskgarden/tailwindcss": "^1.1.0",
+    "autoprefixer": "^10.2.3",
+    "postcss": "^8.2.4",
+    "postcss-scss": "^3.0.4",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^1.2.0"
+  }
+}
