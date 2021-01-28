@@ -36,7 +36,7 @@ h5 {
 /* Add our custom styles here */
 
 body {
-  @apply mb-2;
+  @apply mb-8;
 }
 
 a {
@@ -58,4 +58,19 @@ code.highlighter-rouge {
   @apply p-3;
   @apply rounded;
   @apply text-gray-100;
+}
+
+p {
+  @apply mt-4;
+}
+
+p:first-of-type {
+  @apply mt-0;
+}
+
+ul {
+  @apply list-disc;
+  @apply list-inside;
+  @apply my-2;
+  @apply ml-4;
 }
