@@ -1,2 +1,6 @@
 title: Jekyll - Zendesk Garden
 remote_theme: zendesk/jekyll-theme-zendesk-garden
+
+plugins:
+  - jekyll-postcss
+  - jekyll-remote-theme
