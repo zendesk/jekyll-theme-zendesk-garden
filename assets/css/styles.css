@@ -5,7 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Reset font element sizes to support Markdown better */
+
 h1 {
   @apply text-4xl;
   @apply my-4;
@@ -29,4 +31,31 @@ h4 {
 h5 {
   @apply text-lg;
   @apply my-px;
+}
+
+/* Add our custom styles here */
+
+body {
+  @apply mb-2;
+}
+
+a {
+  @apply text-blue-600;
+}
+
+a:hover {
+  @apply underline;
+}
+
+code.highlighter-rouge {
+  @apply bg-gray-200;
+  @apply px-2;
+  @apply py-px;
+  @apply rounded-sm;
+}
+
+.highlight {
+  @apply p-3;
+  @apply rounded;
+  @apply text-gray-100;
 }
