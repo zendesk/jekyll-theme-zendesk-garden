@@ -14,5 +14,4 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "jekyll-postcss"
-  spec.add_runtime_dependency "jekyll-remote-theme"
 end

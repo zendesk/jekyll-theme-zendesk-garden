@@ -16,4 +16,3 @@ exclude:
 
 plugins:
   - jekyll-postcss
-  - jekyll-remote-theme
