@@ -1,7 +1,2 @@
 plugins:
   - jekyll-postcss
-
-exclude:
-  - "*.config.js"
-  - package*.json
-  - node_modules
