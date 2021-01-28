@@ -16,9 +16,15 @@ This is possible thanks to the following awesome libraries:
 
 ### GitHub Pages
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+Define a `_config.yml` file in your GitHub pages root directory and specify this remote theme:
 
-## Installation
+```yaml
+remote_theme: zendesk/jekyll-theme-zendesk-garden
+```
+
+### As a Gem Theme
+
+#### Installation
 
 Add this line to your Jekyll site's `Gemfile`:
 
