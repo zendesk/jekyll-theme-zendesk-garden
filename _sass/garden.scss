@@ -1,0 +1,149 @@
+/* Reset font element sizes to support Markdown better */
+
+h1 {
+  @extend .text-4xl;
+  @extend .my-4;
+}
+
+h2 {
+  @extend .text-3xl;
+  @extend .my-3;
+}
+
+h3 {
+  @extend .text-2xl;
+  @extend .my-2;
+}
+
+h4 {
+  @extend .text-xl;
+  @extend .my-1;
+}
+
+h5 {
+  @extend .text-lg;
+  @extend .my-px;
+}
+
+/* Add our custom styles here */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  @extend .text-blue-600;
+}
+
+a:hover {
+  @extend .underline;
+}
+
+code.highlighter-rouge {
+  background-color: #f8f8f8;
+  @extend .px-2;
+  @extend .py-px;
+  @extend .rounded-sm;
+}
+
+.highlight {
+  @extend .p-2;
+  @extend .rounded;
+}
+
+p {
+  @extend .mt-4;
+}
+
+p:first-of-type {
+  @extend .mt-0;
+}
+
+ul {
+  @extend .list-disc;
+  @extend .list-inside;
+  @extend .my-2;
+  @extend .ml-4;
+}
+
+/* Chrome stylings */
+.chrome {
+  @extend .flex;
+  @extend .relative;
+  @extend .m-0;
+  @extend .h-screen;
+  @extend .min-w-full;
+  @extend .overflow-y-hidden;
+}
+
+.chrome\:nav {
+  @extend .flex;
+  @extend .relative;
+  @extend .flex-col;
+  @extend .flex-shrink-0;
+  @extend .order-first;
+  @extend .bg-kale-800;
+  width: 60px;
+}
+
+.chrome\:body {
+  @extend .flex-grow;
+  @extend .flex-shrink;
+  @extend .order-1;
+  flex-basis: 0%;
+}
+
+.chrome\:header {
+  @extend .flex;
+  @extend .items-center;
+  @extend .justify-end;
+  @extend .box-border;
+  @extend .border-b;
+  @extend .border-solid;
+  @extend .border-grey-200;
+  @extend .text-grey-500;
+  padding: 0 4px;
+  height: 52px;
+}
+
+.chrome\:content {
+  @extend .flex;
+  @extend .text-grey-800;
+  @extend .leading-normal;
+  height: calc(100% - 52px - 50px); /* full height - header - footer */
+}
+
+.chrome\:sidebar {
+  @extend .flex-shrink-0;
+  @extend .order-none;
+  @extend .bg-grey-100;
+  @extend .box-border;
+  @extend .border-r;
+  @extend .border-solid;
+  @extend .border-grey-200;
+  width: 270px;
+  padding: 28px;
+}
+
+.chrome\:main {
+  @extend .flex-grow;
+  @extend .flex-shrink;
+  @extend .order-1;
+  @extend .overflow-auto;
+  flex-basis: 0%;
+  padding: 28px;
+}
+
+.chrome\:footer {
+  @extend .flex;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .box-border;
+  @extend .border-t;
+  @extend .border-solid;
+  @extend .border-grey-200;
+  @extend .text-grey-700;
+  padding: 0 36px;
+  height: 50px;
+}

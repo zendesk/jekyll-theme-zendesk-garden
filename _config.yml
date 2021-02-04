@@ -3,16 +3,18 @@ description: A Jekyll theme using the Zendesk Garden design patterns
 version: v123
 permalink: pretty
 
-# exclude:
-#   - node_modules
-#   - "*.gemspec"
-#   - "*.gem"
-#   - LICENSE.txt
-#   - Gemfile
-#   - Gemfile.lock
-#   - package.json
-#   - package-lock.json
-#   - postcss.config.js
+exclude:
+  - node_modules
+  - "*.gemspec"
+  - "*.gem"
+  - LICENSE.txt
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - "*.config.js"
 
-plugins:
-  - jekyll-postcss
+# DEVELOPMENT: uncomment this to activate the plugin if you want to update/regenerate the output
+# from tailwind
+# plugins:
+#   - jekyll-postcss
