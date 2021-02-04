@@ -25,6 +25,15 @@
 
         </div>
       </div>
+      <footer class="chrome:footer">
+        <div>
+          {% if site.version and site.version != "" %}
+          <span>Version: {{ site.version }}</span>
+          <span>&nbsp;|&nbsp;</span>
+          {% endif %}
+          <span>Updated: {{ site.time | date: "%Y-%m-%d %H:%M" }}</span>
+        </div>
+      </footer>
     </div>
   </div>
 </body>
