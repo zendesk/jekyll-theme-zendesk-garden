@@ -36,7 +36,8 @@ h5 {
 /* Add our custom styles here */
 
 body {
-  @apply mb-8;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -72,4 +73,84 @@ ul {
   @apply list-inside;
   @apply my-2;
   @apply ml-4;
+}
+
+/* Chrome stylings */
+.chrome {
+  @apply flex;
+  @apply relative;
+  @apply m-0;
+  @apply h-screen;
+  @apply min-w-full;
+  @apply overflow-y-hidden;
+}
+
+.chrome\:nav {
+  @apply flex;
+  @apply relative;
+  @apply flex-col;
+  @apply flex-shrink-0;
+  @apply order-first;
+  @apply bg-kale-800;
+  width: 60px;
+}
+
+.chrome\:body {
+  @apply flex-grow;
+  @apply flex-shrink;
+  @apply order-1;
+  flex-basis: 0%;
+}
+
+.chrome\:header {
+  @apply flex;
+  @apply items-center;
+  @apply justify-end;
+  @apply box-border;
+  @apply border-b;
+  @apply border-solid;
+  @apply border-grey-200;
+  @apply text-grey-500;
+  padding: 0 4px;
+  height: 52px;
+}
+
+.chrome\:content {
+  @apply flex;
+  @apply text-grey-800;
+  @apply leading-normal;
+  height: calc(100% - 52px); /* full height - header */
+}
+
+.chrome\:sidebar {
+  @apply flex-shrink-0;
+  @apply order-none;
+  @apply bg-grey-100;
+  @apply box-border;
+  @apply border-r;
+  @apply border-solid;
+  @apply border-grey-200;
+  width: 270px;
+  padding: 28px;
+}
+
+.chrome\:main {
+  @apply flex-grow;
+  @apply flex-shrink;
+  @apply order-1;
+  @apply overflow-auto;
+  flex-basis: 0%;
+  padding: 28px;
+}
+
+.chrome\:footer {
+  @apply flex;
+  @apply items-center;
+  @apply justify-end;
+  @apply box-border;
+  @apply border-t;
+  @apply border-solid;
+  @apply border-grey-200;
+  padding: 0 36px;
+  height: 80px;
 }
