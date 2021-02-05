@@ -1,0 +1,158 @@
+---
+# Required frontmatter to ensure Jekyll processes this page
+---
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Reset font element sizes to support Markdown better */
+
+h1 {
+  @apply text-4xl;
+  @apply my-4;
+}
+
+h2 {
+  @apply text-3xl;
+  @apply my-3;
+}
+
+h3 {
+  @apply text-2xl;
+  @apply my-2;
+}
+
+h4 {
+  @apply text-xl;
+  @apply my-1;
+}
+
+h5 {
+  @apply text-lg;
+  @apply my-px;
+}
+
+/* Add our custom styles here */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  @apply text-blue-600;
+}
+
+a:hover {
+  @apply underline;
+}
+
+code.highlighter-rouge {
+  background-color: #f8f8f8;
+  @apply px-2;
+  @apply py-px;
+  @apply rounded-sm;
+}
+
+.highlight {
+  @apply p-2;
+  @apply rounded;
+}
+
+p {
+  @apply mt-4;
+}
+
+p:first-of-type {
+  @apply mt-0;
+}
+
+ul {
+  @apply list-disc;
+  @apply list-inside;
+  @apply my-2;
+  @apply ml-4;
+}
+
+/* Chrome stylings */
+.chrome {
+  @apply flex;
+  @apply relative;
+  @apply m-0;
+  @apply h-screen;
+  @apply min-w-full;
+  @apply overflow-y-hidden;
+}
+
+.chrome\:nav {
+  @apply flex;
+  @apply relative;
+  @apply flex-col;
+  @apply flex-shrink-0;
+  @apply order-first;
+  @apply bg-kale-800;
+  width: 60px;
+}
+
+.chrome\:body {
+  @apply flex-grow;
+  @apply flex-shrink;
+  @apply order-1;
+  flex-basis: 0%;
+}
+
+.chrome\:header {
+  @apply flex;
+  @apply items-center;
+  @apply justify-end;
+  @apply box-border;
+  @apply border-b;
+  @apply border-solid;
+  @apply border-grey-200;
+  @apply text-grey-500;
+  padding: 0 4px;
+  height: 52px;
+}
+
+.chrome\:content {
+  @apply flex;
+  @apply text-grey-800;
+  @apply leading-normal;
+  height: calc(100% - 52px - 50px); /* full height - header - footer */
+}
+
+.chrome\:sidebar {
+  @apply flex-shrink-0;
+  @apply order-none;
+  @apply bg-grey-100;
+  @apply box-border;
+  @apply border-r;
+  @apply border-solid;
+  @apply border-grey-200;
+  width: 270px;
+  padding: 28px;
+}
+
+.chrome\:main {
+  @apply flex-grow;
+  @apply flex-shrink;
+  @apply order-1;
+  @apply overflow-auto;
+  flex-basis: 0%;
+  padding: 28px;
+}
+
+.chrome\:footer {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply box-border;
+  @apply border-t;
+  @apply border-solid;
+  @apply border-grey-200;
+  @apply text-grey-700;
+  padding: 0 36px;
+  height: 50px;
+}

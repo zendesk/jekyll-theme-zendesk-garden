@@ -14,7 +14,5 @@ exclude:
   - package-lock.json
   - "*.config.js"
 
-# DEVELOPMENT: uncomment this to activate the plugin if you want to update/regenerate the output
-# from tailwind
-# plugins:
-#   - jekyll-postcss
+plugins:
+  - jekyll-postcss
