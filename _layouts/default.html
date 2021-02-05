@@ -12,20 +12,20 @@
 <body>
   <div class="chrome">
     <div class="chrome:nav">
-      {% if site.version and site.version != "" %}
       <div class="chrome:logo_nav_item">
         {% include z.svg %}
       </div>
-      {% endif %}
     </div>
     <div class="chrome:body">
       <header class="chrome:header">
         <div class="chrome:header_title">
           <span class="text-3xl">{{ site.title }}</span>
         </div>
+        {% if site.version and site.version != "" %}
         <div class="chrome:header_item">
           <span class="text-xl">{{ site.version }}</span>
         </div>
+        {% endif %}
       </header>
       <div class="chrome:content">
         <div class="chrome:main">
