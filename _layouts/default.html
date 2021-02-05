@@ -26,17 +26,21 @@
           <div class="chrome:sidebar">
             {% for item in site.sidebar %}
               {% if item.children %}
+                {% assign active_child = item.children | where: "id", page.id | first %}
                 {% capture id %}sidebar_item:-{{ item.label }}{% endcapture %}
                 {% capture accordian_id %}{{ id }}:accordian{% endcapture %}
+                {% capture collapsibleClass %}
+                  {%- if active_child -%}expanded{%- else -%}collapsed{%- endif -%}
+                {% endcapture %}
                 <button
                   id="{{ id }}"
-                  class="chrome:sidebar_item chrome:sidebar_item_collapsible chrome:sidebar_item_collapsed"
+                  class="chrome:sidebar_item chrome:sidebar_item_collapsible chrome:sidebar_item_{{ collapsibleClass }}"
                   onclick="toggleAccordian('{{ id }}')"
                 >
                   {{ item.label }}
                   {% include collapsible_sidebar_icon.html %}
                 </button>
-                <div id="{{ accordian_id }}" class="chrome:sidebar_item_accordian chrome:sidebar_item_accordian_collapsed">
+                <div id="{{ accordian_id }}" class="chrome:sidebar_item_accordian chrome:sidebar_item_accordian_{{ collapsibleClass }}">
                   {% for child in item.children %}
                     {% assign meta = site.pages | where: "id", child.id | first %}
                     <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item chrome:sidebar_item_child">{{ meta.sidebar_label | default: meta.title }}</a>
