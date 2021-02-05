@@ -21,9 +21,30 @@
         <div class="chrome:main">
           {{ content }}
         </div>
-        <div class="chrome:sidebar">
-
-        </div>
+        {% if site.sidebar %}
+          <div class="chrome:sidebar">
+            {% for item in site.sidebar %}
+              {% if item.children %}
+                {% assign is_expanded = true %}
+                <button class="chrome:sidebar_item">
+                  {{ item.label }}
+                  {% include collapsible_sidebar_icon.html is_expanded=is_expanded  %}
+                </button>
+                {% if is_expanded %}
+                  <div class="chrome:sidebar_item_accordian">
+                    {% for child in item.children %}
+                      {% assign meta = site.pages | where: "id", child.id | first %}
+                      <button class="chrome:sidebar_item chrome:sidebar_item_child">{{ meta.title }}</button>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              {% else %}
+                {% assign meta = site.pages | where: "id", item.id | first %}
+                <button class="chrome:sidebar_item">{{ meta.title }}</button>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
       <footer class="chrome:footer">
         <div>
