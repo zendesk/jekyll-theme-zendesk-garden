@@ -120,6 +120,21 @@ ul {
   height: 52px;
 }
 
+.chrome\:header_title {
+  @extend .inline-flex;
+  @extend .relative;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .order-1;
+  @extend .flex-grow;
+  @extend .text-kale-800;
+  @extend .font-semibold;
+  margin: 0 12px;
+  padding: 0 3px;
+  height: 30px;
+  min-width: 30px;
+}
+
 .chrome\:header_item {
   @extend .inline-flex;
   @extend .relative;
