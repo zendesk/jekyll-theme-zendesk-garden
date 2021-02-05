@@ -155,18 +155,46 @@ ul {
   @extend .w-full;
   @extend .rounded;
   @extend .relative;
+  @extend .text-grey-800;
+  @extend .no-underline;
   cursor: pointer;
   min-height: 30px;
   margin: 8px 0 0;
   padding: 0 8px;
 }
 
-.chrome\:sidebar_item .chrome\:active_sidbar_item {
+.chrome\:sidebar_item .chrome\:active_sidebar_item {
   cursor: default;
 }
 
 .chrome\:sidebar_item:hover {
+  @extend .text-grey-800;
+  @extend .no-underline;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chrome\:sidebar_item_expanded {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.chrome\:sidebar_item_accordian {
+  transition: max-height 0.25s cubic-bezier(0.15, 0.85, 0.35, 1.2) 0s, visibility 0.25s linear 0s;
+}
+
+.chrome\:sidebar_item_accordian_collapsed {
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.chrome\:sidebar_item_accordian_expanded {
+
+}
+
+.chrome\:sidebar_item_child {
+  padding-left: 20px;
 }
 
 .chrome\:collapsible_sub_nav_item_icon {
@@ -177,16 +205,4 @@ ul {
   @extend .items-center;
   width: 28px;
   height: 30px;
-}
-
-.chrome\:collapsible_expanded {
-  transform: rotate(180deg);
-}
-
-.chrome\:sidebar_item_accordian {
-  transition: max-height 0.25s cubic-bezier(0.15, 0.85, 0.35, 1.2) 0s, visibility 0.25s linear 0s;
-}
-
-.chrome\:sidebar_item_child {
-  padding-left: 20px;
 }

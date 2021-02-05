@@ -6,6 +6,7 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/rouge.css' | relative_url }}">
+  <script src="{{ '/assets/js/accordian.js' | relative_url }}"></script>
 </head>
 
 <body>
@@ -25,22 +26,25 @@
           <div class="chrome:sidebar">
             {% for item in site.sidebar %}
               {% if item.children %}
-                {% assign is_expanded = true %}
-                <button class="chrome:sidebar_item">
+                {% capture id %}sidebar_item:-{{ item.label }}{% endcapture %}
+                {% capture accordian_id %}{{ id }}:accordian{% endcapture %}
+                <button
+                  id="{{ id }}"
+                  class="chrome:sidebar_item chrome:sidebar_item_collapsible chrome:sidebar_item_collapsed"
+                  onclick="toggleAccordian('{{ id }}')"
+                >
                   {{ item.label }}
-                  {% include collapsible_sidebar_icon.html is_expanded=is_expanded  %}
+                  {% include collapsible_sidebar_icon.html %}
                 </button>
-                {% if is_expanded %}
-                  <div class="chrome:sidebar_item_accordian">
-                    {% for child in item.children %}
-                      {% assign meta = site.pages | where: "id", child.id | first %}
-                      <button class="chrome:sidebar_item chrome:sidebar_item_child">{{ meta.title }}</button>
-                    {% endfor %}
-                  </div>
-                {% endif %}
+                <div id="{{ accordian_id }}" class="chrome:sidebar_item_accordian chrome:sidebar_item_accordian_collapsed">
+                  {% for child in item.children %}
+                    {% assign meta = site.pages | where: "id", child.id | first %}
+                    <a href="{{ meta.url }}" class="chrome:sidebar_item chrome:sidebar_item_child">{{ meta.sidebar_label | default: meta.title }}</a>
+                  {% endfor %}
+                </div>
               {% else %}
                 {% assign meta = site.pages | where: "id", item.id | first %}
-                <button class="chrome:sidebar_item">{{ meta.title }}</button>
+                <a href="{{ meta.url }}" class="chrome:sidebar_item">{{ meta.sidebar_label | default: meta.title }}</a>
               {% endif %}
             {% endfor %}
           </div>

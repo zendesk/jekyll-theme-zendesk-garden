@@ -9,6 +9,12 @@ plugins:
 whitelist:
   - jekyll-postcss
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
 sidebar:
   - id: getting-started
   - label: Recipes
