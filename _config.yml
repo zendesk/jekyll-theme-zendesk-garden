@@ -16,3 +16,6 @@ exclude:
 
 plugins:
   - jekyll-postcss
+
+whitelist:
+  - jekyll-postcss
