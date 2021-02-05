@@ -87,6 +87,19 @@ ul {
   width: 60px;
 }
 
+.chrome\:logo_nav_item {
+  @extend .flex;
+  @extend .flex-shrink-0;
+  @extend .items-center;
+  @extend .box-border;
+  @extend .justify-center;
+  @extend .order-first;
+  @extend .no-underline;
+  @extend .text-white;
+  padding: 13px 8.5px;
+  min-height: 52px;
+}
+
 .chrome\:body {
   @extend .flex-grow;
   @extend .flex-shrink;
@@ -105,6 +118,18 @@ ul {
   @extend .text-grey-500;
   padding: 0 4px;
   height: 52px;
+}
+
+.chrome\:header_item {
+  @extend .inline-flex;
+  @extend .relative;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .order-1;
+  margin: 0 12px;
+  padding: 0 3px;
+  height: 30px;
+  min-width: 30px;
 }
 
 .chrome\:content {

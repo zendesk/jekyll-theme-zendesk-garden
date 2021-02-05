@@ -12,11 +12,17 @@
 <body>
   <div class="chrome">
     <div class="chrome:nav">
-      <div></div>
+      {% if site.version and site.version != "" %}
+      <div class="chrome:logo_nav_item">
+        {% include z.svg %}
+      </div>
+      {% endif %}
     </div>
     <div class="chrome:body">
       <header class="chrome:header">
-
+        <div class="chrome:header_item">
+          <h3>{{ site.version }}</h3>
+        </div>
       </header>
       <div class="chrome:content">
         <div class="chrome:main">
@@ -25,11 +31,11 @@
         {% if site.sidebar %}
           <div class="chrome:sidebar">
             {% if page.id == nil %}
-              {% assign active_class = "chrome:active_sidebar_item" %}
+              {% assign home_class = "chrome:active_sidebar_item" %}
             {% else %}
-              {% assign active_class = "" %}
+              {% assign home_class = "" %}
             {% endif %}
-            <a href="{{ site.url | default: "/docs" | relative_url }}" class="chrome:sidebar_item {{ active_class }}">Home</a>
+            <a href="{{ "/" | relative_url }}" class="chrome:sidebar_item {{ home_class }}">Home</a>
             {% for item in site.sidebar %}
               {% if item.children %}
                 {% assign active_child = item.children | where: "id", page.id | first %}
@@ -76,10 +82,6 @@
       </div>
       <footer class="chrome:footer">
         <div>
-          {% if site.version and site.version != "" %}
-          <span>Version: {{ site.version }}</span>
-          <span>&nbsp;|&nbsp;</span>
-          {% endif %}
           <span>Updated: {{ site.time | date: "%Y-%m-%d %H:%M" }}</span>
         </div>
       </footer>
