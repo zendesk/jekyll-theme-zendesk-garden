@@ -24,7 +24,12 @@
         </div>
         {% if site.sidebar %}
           <div class="chrome:sidebar">
-            <a href="{{ site.url | relative_url }}" class="chrome:sidebar_item">Home</a>
+            {% if page.id == nil %}
+              {% assign active_class = "chrome:active_sidebar_item" %}
+            {% else %}
+              {% assign active_class = "" %}
+            {% endif %}
+            <a href="{{ site.url | default: "/docs" | relative_url }}" class="chrome:sidebar_item {{ active_class }}">Home</a>
             {% for item in site.sidebar %}
               {% if item.children %}
                 {% assign active_child = item.children | where: "id", page.id | first %}

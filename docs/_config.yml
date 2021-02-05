@@ -2,6 +2,8 @@ title: Jekyll - Zendesk Garden
 remote_theme: zendesk/jekyll-theme-zendesk-garden@main
 version: v0.1.0
 
+baseurl: /jekyll-theme-zendesk-garden
+
 sidebar:
   - id: getting-started
   - label: Recipes
