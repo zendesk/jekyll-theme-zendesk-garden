@@ -17,8 +17,8 @@ defaults:
       layout: default
 
 sidebar:
-  - id: getting-started
+  - getting-started
   - label: Recipes
     children:
-      - id: cookies
-      - id: toast
+      - cookies
+      - toast

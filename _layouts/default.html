@@ -38,11 +38,10 @@
             <a href="{{ "/" | relative_url }}" class="chrome:sidebar_item {{ home_class }}">Home</a>
             {% for item in site.sidebar %}
               {% if item.children %}
-                {% assign active_child = item.children | where: "id", page.id | first %}
                 {% capture id %}sidebar_item:-{{ item.label }}{% endcapture %}
                 {% capture accordian_id %}{{ id }}:accordian{% endcapture %}
                 {% capture collapsibleClass %}
-                  {%- if active_child -%}expanded{%- else -%}collapsed{%- endif -%}
+                  {%- if item.children contains page.id -%}expanded{%- else -%}collapsed{%- endif -%}
                 {% endcapture %}
                 <button
                   id="{{ id }}"
@@ -54,7 +53,7 @@
                 </button>
                 <div id="{{ accordian_id }}" class="chrome:sidebar_item_accordian chrome:sidebar_item_accordian_{{ collapsibleClass }}">
                   {% for child in item.children %}
-                    {% assign meta = site.pages | where: "id", child.id | first %}
+                    {% assign meta = site.pages | where: "id", child | first %}
                     {% if page.id == meta.id %}
                       {% assign active_class = "chrome:active_sidebar_item" %}
                     {% else %}
@@ -66,7 +65,7 @@
                   {% endfor %}
                 </div>
               {% else %}
-                {% assign meta = site.pages | where: "id", item.id | first %}
+                {% assign meta = site.pages | where: "id", item | first %}
                 {% if page.id == meta.id %}
                   {% assign active_class = "chrome:active_sidebar_item" %}
                 {% else %}

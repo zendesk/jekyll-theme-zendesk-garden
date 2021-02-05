@@ -19,7 +19,33 @@ This is possible thanks to the following awesome libraries:
 Define a `_config.yml` file in your GitHub pages root directory and specify this remote theme:
 
 ```yaml
-remote_theme: zendesk/jekyll-theme-zendesk-garden
+remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.1.0
+```
+
+#### Sidebar Navigation
+
+To display a sidebar for navigation, add a `sidebar` definition to your `_config.yml`.
+
+The `sidebar` is a list that can either contain the ID of a page to link to, or a `label` and list
+of `children` for nested navigation. There can only be one level of nesting.
+
+##### Example
+
+```yaml
+remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.1.0
+
+sidebar:
+  - getting-started
+  - label: Module One
+    children:
+      - using-module-one
+      - testing-module-one
+  - label: Module Two
+    children:
+      - using-module-two
+      - advanced-module-two
+      - deploying-module-two
+  - troubleshooting
 ```
 
 ### As a Gem Theme
