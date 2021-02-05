@@ -39,12 +39,12 @@
                 <div id="{{ accordian_id }}" class="chrome:sidebar_item_accordian chrome:sidebar_item_accordian_collapsed">
                   {% for child in item.children %}
                     {% assign meta = site.pages | where: "id", child.id | first %}
-                    <a href="{{ meta.url }}" class="chrome:sidebar_item chrome:sidebar_item_child">{{ meta.sidebar_label | default: meta.title }}</a>
+                    <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item chrome:sidebar_item_child">{{ meta.sidebar_label | default: meta.title }}</a>
                   {% endfor %}
                 </div>
               {% else %}
                 {% assign meta = site.pages | where: "id", item.id | first %}
-                <a href="{{ meta.url }}" class="chrome:sidebar_item">{{ meta.sidebar_label | default: meta.title }}</a>
+                <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item">{{ meta.sidebar_label | default: meta.title }}</a>
               {% endif %}
             {% endfor %}
           </div>
