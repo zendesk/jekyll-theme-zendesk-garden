@@ -9,7 +9,7 @@ A Jekyll theme using Zendesk Garden design patterns.
 This is possible thanks to the following awesome libraries:
 
 - [`jekyll-postcss` plugin](https://github.com/mhanberg/jekyll-postcss)
-- [`tailwind-css` as a PostCSS plugin](https://tailwindcss.com/docs/installation#add-tailwind-as-a-post-css-plugin)
+- [`tailwindcss` as a PostCSS plugin](https://tailwindcss.com/docs/installation#add-tailwind-as-a-post-css-plugin)
 - [zendeskgarden/tailwindcss](https://github.com/zendeskgarden/tailwindcss)
 
 ## Usage
@@ -48,7 +48,7 @@ Or install it yourself as:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/zendesk/jekyll-theme-zendesk-garden](https://github.com/zendesk/jekyll-theme-zendesk-garden). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome [on GitHub](https://github.com/zendesk/jekyll-theme-zendesk-garden). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
