@@ -24,6 +24,7 @@
         </div>
         {% if site.sidebar %}
           <div class="chrome:sidebar">
+            <a href="{{ site.url | relative_url }}" class="chrome:sidebar_item">Home</a>
             {% for item in site.sidebar %}
               {% if item.children %}
                 {% assign active_child = item.children | where: "id", page.id | first %}
@@ -43,12 +44,26 @@
                 <div id="{{ accordian_id }}" class="chrome:sidebar_item_accordian chrome:sidebar_item_accordian_{{ collapsibleClass }}">
                   {% for child in item.children %}
                     {% assign meta = site.pages | where: "id", child.id | first %}
-                    <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item chrome:sidebar_item_child">{{ meta.sidebar_label | default: meta.title }}</a>
+                    {% if page.id == meta.id %}
+                      {% assign active_class = "chrome:active_sidebar_item" %}
+                    {% else %}
+                      {% assign active_class = "" %}
+                    {% endif %}
+                    <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item {{ active_class }} chrome:sidebar_item_child">
+                      {{ meta.sidebar_label | default: meta.title }}
+                    </a>
                   {% endfor %}
                 </div>
               {% else %}
                 {% assign meta = site.pages | where: "id", item.id | first %}
-                <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item">{{ meta.sidebar_label | default: meta.title }}</a>
+                {% if page.id == meta.id %}
+                  {% assign active_class = "chrome:active_sidebar_item" %}
+                {% else %}
+                  {% assign active_class = "" %}
+                {% endif %}
+                <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item {{ active_class }}">
+                  {{ meta.sidebar_label | default: meta.title }}
+                </a>
               {% endif %}
             {% endfor %}
           </div>

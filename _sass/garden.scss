@@ -163,14 +163,20 @@ ul {
   padding: 0 8px;
 }
 
-.chrome\:sidebar_item .chrome\:active_sidebar_item {
-  cursor: default;
-}
-
 .chrome\:sidebar_item:hover {
   @extend .text-grey-800;
   @extend .no-underline;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chrome\:sidebar_item.chrome\:active_sidebar_item {
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chrome\:sidebar_item.chrome\:active_sidebar_item:hover {
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .chrome\:sidebar_item_expanded {
