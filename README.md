@@ -19,7 +19,7 @@ This is possible thanks to the following awesome libraries:
 Define a `_config.yml` file in your GitHub pages root directory and specify this remote theme:
 
 ```yaml
-remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.1.0
+remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.2.0
 ```
 
 #### Sidebar Navigation
@@ -32,7 +32,7 @@ of `children` for nested navigation. There can only be one level of nesting.
 ##### Example
 
 ```yaml
-remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.1.0
+remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.2.0
 
 sidebar:
   - getting-started
