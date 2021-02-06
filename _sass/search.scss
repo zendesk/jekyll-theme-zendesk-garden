@@ -1,0 +1,10 @@
+.no_search_results\:hidden {
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.search_input {
+  @extend .text-grey-800;
+  padding: 0 6px;
+  min-width: 300px;
+}

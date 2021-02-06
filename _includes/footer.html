@@ -1,0 +1,12 @@
+<footer class="chrome:footer">
+  {%- if site.version and site.version != "" -%}
+  <div class="chrome:footer_item">
+    <span class="text-lg">{{ site.version }}</span>
+  </div>
+  {%- endif -%}
+  <div class="chrome:footer_item">
+    <span class="text-lg"
+      >Updated: {{ site.time | date: "%Y-%m-%d %H:%M" }}</span
+    >
+  </div>
+</footer>

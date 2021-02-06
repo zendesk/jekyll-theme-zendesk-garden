@@ -1,95 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title | default: site.title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/rouge.css' | relative_url }}"
+    />
+    <script src="{{ '/assets/js/accordian.js' | relative_url }}"></script>
+    {% if site.search_enabled %}
+    <script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+    {% endif %}
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/rouge.css' | relative_url }}">
-  <script src="{{ '/assets/js/accordian.js' | relative_url }}"></script>
-</head>
-
-<body>
-  <div class="chrome">
-    <div class="chrome:nav">
-      <div class="chrome:logo_nav_item">
-        {% include z.svg %}
+  <body>
+    <div class="chrome">
+      {% include navbar.html %}
+      <div class="chrome:body">
+        {% include header.html %}
+        <div class="chrome:content">
+          <div class="chrome:main">{{ content }}</div>
+          {% if site.sidebar %} {% include sidebar.html %} {% endif %}
+        </div>
+        {% include footer.html %}
       </div>
     </div>
-    <div class="chrome:body">
-      <header class="chrome:header">
-        <div class="chrome:header_title">
-          <span class="text-3xl">{{ site.title }}</span>
-        </div>
-
-      </header>
-      <div class="chrome:content">
-        <div class="chrome:main">
-          {{ content }}
-        </div>
-        {% if site.sidebar %}
-          <div class="chrome:sidebar">
-            {% if page.id == nil %}
-              {% assign home_class = "chrome:active_sidebar_item" %}
-            {% else %}
-              {% assign home_class = "" %}
-            {% endif %}
-            <a href="{{ "/" | relative_url }}" class="chrome:sidebar_item {{ home_class }}">Home</a>
-            {% for item in site.sidebar %}
-              {% if item.children %}
-                {% capture id %}sidebar_item:-{{ item.label }}{% endcapture %}
-                {% capture accordian_id %}{{ id }}:accordian{% endcapture %}
-                {% capture collapsibleClass %}
-                  {%- if item.children contains page.id -%}expanded{%- else -%}collapsed{%- endif -%}
-                {% endcapture %}
-                <button
-                  id="{{ id }}"
-                  class="chrome:sidebar_item chrome:sidebar_item_collapsible chrome:sidebar_item_{{ collapsibleClass }}"
-                  onclick="toggleAccordian('{{ id }}')"
-                >
-                  {{ item.label }}
-                  {% include collapsible_sidebar_icon.html %}
-                </button>
-                <div id="{{ accordian_id }}" class="chrome:sidebar_item_accordian chrome:sidebar_item_accordian_{{ collapsibleClass }}">
-                  {% for child in item.children %}
-                    {% assign meta = site.pages | where: "id", child | first %}
-                    {% if page.id == meta.id %}
-                      {% assign active_class = "chrome:active_sidebar_item" %}
-                    {% else %}
-                      {% assign active_class = "" %}
-                    {% endif %}
-                    <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item {{ active_class }} chrome:sidebar_item_child">
-                      {{ meta.sidebar_label | default: meta.title }}
-                    </a>
-                  {% endfor %}
-                </div>
-              {% else %}
-                {% assign meta = site.pages | where: "id", item | first %}
-                {% if page.id == meta.id %}
-                  {% assign active_class = "chrome:active_sidebar_item" %}
-                {% else %}
-                  {% assign active_class = "" %}
-                {% endif %}
-                <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item {{ active_class }}">
-                  {{ meta.sidebar_label | default: meta.title }}
-                </a>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
-      </div>
-      <footer class="chrome:footer">
-        {%- if site.version and site.version != "" -%}
-        <div class="chrome:footer_item">
-          <span class="text-lg">{{ site.version }}</span>
-        </div>
-        {%- endif -%}
-        <div class="chrome:footer_item">
-          <span class="text-lg">Updated: {{ site.time | date: "%Y-%m-%d %H:%M" }}</span>
-        </div>
-      </footer>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

@@ -1,2 +1,7 @@
-*.css
-*.scss
+assets/css/*.css
+assets/css/*.scss
+assets/js/search_data.json
+assets/js/vendor/lunr.min.js
+_layouts/default.html
+_site/
+node_modules/

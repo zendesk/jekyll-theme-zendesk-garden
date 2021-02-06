@@ -18,11 +18,3 @@ const toggleAccordian = (elementId) => {
     accordian?.classList?.add(accordianExpandedClassName)
   }
 }
-
-const init = () => {}
-
-document.onreadystatechange = () => {
-  if (document.readyState === 'complete') {
-    init()
-  }
-}

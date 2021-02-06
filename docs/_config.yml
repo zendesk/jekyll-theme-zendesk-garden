@@ -1,8 +1,10 @@
-title: Jekyll - Zendesk Garden
+title: Zendesk Garden Jekyll Theme
 remote_theme: zendesk/jekyll-theme-zendesk-garden@main
 version: v0.2.0
 
 baseurl: /jekyll-theme-zendesk-garden
+
+search_enabled: true
 
 sidebar:
   - getting-started

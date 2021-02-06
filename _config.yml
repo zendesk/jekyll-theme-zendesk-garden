@@ -1,20 +1,10 @@
-title: Jekyll Zendesk Garden
+title: Zendesk Garden Jekyll Theme
 description: A Jekyll theme using the Zendesk Garden design patterns
 version: v0.2.0
+
 permalink: pretty
 
-plugins:
-  - jekyll-postcss
-
-whitelist:
-  - jekyll-postcss
-
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
+search_enabled: true
 
 sidebar:
   - getting-started
@@ -22,3 +12,31 @@ sidebar:
     children:
       - cookies
       - toast
+
+plugins:
+  - jekyll-postcss
+
+whitelist:
+  - jekyll-postcss
+
+exclude:
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - .prettierrc
+  - .prettierignore
+  - .tool-versions
+  - Gemfile
+  - LICENSE*
+  - node_modules
+  - package.json
+  - README
+  - '*.gemspec'
+  - '*.config.js'
+
+defaults:
+  - scope:
+      path: ''
+      type: 'pages'
+    values:
+      layout: default
