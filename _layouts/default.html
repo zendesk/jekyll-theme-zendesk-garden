@@ -21,11 +21,7 @@
         <div class="chrome:header_title">
           <span class="text-3xl">{{ site.title }}</span>
         </div>
-        {% if site.version and site.version != "" %}
-        <div class="chrome:header_item">
-          <span class="text-xl">{{ site.version }}</span>
-        </div>
-        {% endif %}
+
       </header>
       <div class="chrome:content">
         <div class="chrome:main">
@@ -83,8 +79,13 @@
         {% endif %}
       </div>
       <footer class="chrome:footer">
-        <div>
-          <span>Updated: {{ site.time | date: "%Y-%m-%d %H:%M" }}</span>
+        {%- if site.version and site.version != "" -%}
+        <div class="chrome:footer_item">
+          <span class="text-lg">{{ site.version }}</span>
+        </div>
+        {%- endif -%}
+        <div class="chrome:footer_item">
+          <span class="text-lg">Updated: {{ site.time | date: "%Y-%m-%d %H:%M" }}</span>
         </div>
       </footer>
     </div>

@@ -188,6 +188,18 @@ ul {
   height: 50px;
 }
 
+.chrome\:footer_item {
+  @extend .inline-flex;
+  @extend .relative;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .order-1;
+  margin: 0 12px;
+  padding: 0 3px;
+  height: 30px;
+  min-width: 30px;
+}
+
 .chrome\:sidebar_item {
   @extend .flex;
   @extend .items-center;
