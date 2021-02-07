@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Zendesk Garden Jekyll Theme
 ---
 
 # jekyll-theme-zendesk-garden

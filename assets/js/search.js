@@ -69,10 +69,10 @@ const parseParams = () => {
 const performSearch = (index, docs, query) => {
   const results = index.search(query)
 
-  if (results?.length === 0) {
-    showNoResults(query)
+  if (results?.length > 0) {
+    buildResults(results, docs)
   } else {
-    buildResults(results)
+    showNoResults(query)
   }
 }
 
@@ -82,9 +82,9 @@ const submitSearch = (event) => {
   const query = input?.value
   const search_results_url = "{{ '/assets/html/search_results' | absolute_url }}"
 
-  if (!query) return
-
-  window.location = `${search_results_url}?q=${query}`
+  if (query) {
+    window.location = `${search_results_url}?q=${query}`
+  }
 }
 
 const showNoResults = (query) => {
@@ -95,8 +95,79 @@ const showNoResults = (query) => {
   el.classList.remove('no_search_results:hidden')
 }
 
-const buildResults = (results) => {
+const resultNode = () => {
+  const el = document.createElement('div')
 
+  el.classList.add('search_result')
+
+  return el
+}
+
+const highlightContent = (metadata, prop, input) => {
+  let result = input
+  let offset = 0
+
+  for (const phrase in metadata) {
+    metadata[phrase][prop]?.position?.forEach(([pos, len]) => {
+      const start = pos + offset
+      const end = start + len
+      const left = result.slice(0, start)
+      const right = result.slice(end)
+      const highlight = `<span class="search_result:highlight">${result.slice(start, end)}</span>`
+
+      result = left + highlight + right
+      offset += highlight.length - len
+    })
+  }
+
+  return result
+}
+
+const resultTitle = (metadata, doc) => {
+  const el = document.createElement('div')
+  const link = document.createElement('a')
+
+  link.setAttribute('href', doc.relUrl)
+  link.innerHTML = highlightContent(metadata, 'title', doc.title)
+
+  el.appendChild(link)
+  el.classList.add('search_result:title')
+
+  return el
+}
+
+const resultPreview = (metadata, doc) => {
+  const el = document.createElement('div')
+  const p = document.createElement('p')
+
+  p.innerHTML = highlightContent(metadata, 'content', doc.content)
+  p.classList.add('search_result:preview_text')
+
+  el.appendChild(p)
+  el.classList.add('search_result:preview')
+
+  return el
+}
+
+const buildResult = (metadata, doc) => {
+  const result = resultNode()
+  const title = resultTitle(metadata, doc)
+  const preview = resultPreview(metadata, doc)
+
+  result.appendChild(title)
+  result.appendChild(preview)
+
+  return result
+}
+
+const buildResults = (results, docs) => {
+  const resultsEl = document.getElementById('search_results')
+
+  results.forEach(({ matchData, ref }) => {
+    const result = buildResult(matchData.metadata, docs[ref])
+
+    resultsEl.appendChild(result)
+  })
 }
 
 z.onReady(() => {

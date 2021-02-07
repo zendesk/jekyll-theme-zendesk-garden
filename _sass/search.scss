@@ -1,10 +1,39 @@
 .no_search_results\:hidden {
   visibility: hidden;
   overflow: hidden;
+  max-height: 0 !important;
 }
 
 .search_input {
   @extend .text-grey-800;
   padding: 0 6px;
   min-width: 300px;
+}
+
+.search_results {
+}
+
+.search_result {
+}
+
+.search_result\:title {
+  @extend .border-b;
+  @extend .border-solid;
+  @extend .border-grey-200;
+}
+
+.search_result\:preview {
+}
+
+.search_result\:preview_text {
+  @extend .break-words;
+  @extend .overflow-hidden;
+  text-overflow: ellipsis;
+  max-height: 120px;
+}
+
+.search_result\:highlight {
+  @extend .font-semibold;
+  @extend .bg-yellow-300;
+  padding: 1px 3px;
 }

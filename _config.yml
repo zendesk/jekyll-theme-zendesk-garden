@@ -13,6 +13,14 @@ sidebar:
       - cookies
       - toast
 
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+
 plugins:
   - jekyll-postcss
 
@@ -30,7 +38,8 @@ exclude:
   - LICENSE*
   - node_modules
   - package.json
-  - README
+  - package-lock.json
+  - README*
   - '*.gemspec'
   - '*.config.js'
 

@@ -4,7 +4,7 @@
   {% else %}
     {% assign home_class = "" %}
   {% endif %}
-  <a href="{{ " /" | relative_url }}" class="chrome:sidebar_item {{ home_class }}">Home</a>
+  <a href="{{ "/" | relative_url }}" class="chrome:sidebar_item {{ home_class }}">Home</a>
   {% for item in site.sidebar %}
     {% if item.children %}
       {% capture id %}sidebar_item:-{{ item.label }}{% endcapture %}

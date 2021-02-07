@@ -4,4 +4,6 @@
 
 @import "vendor/tailwind";
 @import "garden";
+{%- if site.search_enabled -%}
 @import "search";
+{%- endif %}
