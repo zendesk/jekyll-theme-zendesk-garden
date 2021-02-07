@@ -173,7 +173,7 @@ const buildResults = (results, docs) => {
 z.onReady(() => {
   document.getElementById('search').addEventListener('submit', submitSearch)
 
-  if (window.location.pathname === '/assets/html/search_results/') {
+  if (window.location.pathname.includes('assets/html/search_results')) {
     const params = parseParams()
     document.getElementById('search_input').value = params.q
     initSearch(params.q)
