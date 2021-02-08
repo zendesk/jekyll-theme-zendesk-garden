@@ -1,6 +1,6 @@
 {
   "name": "jekyll-theme-zendesk-garden",
-  "version": "0.3.2",
+  "version": "0.0.0-dev",
   "description": "A Jekyll theme using the Zendesk Garden design patterns.",
   "repository": {
     "type": "git",
@@ -8,6 +8,7 @@
   },
   "author": "Craig Day",
   "license": "Apache-2.0",
+  "private": true,
   "homepage": "https://github.com/zendesk/jekyll-theme-zendesk-garden#readme",
   "devDependencies": {
     "@zendeskgarden/tailwindcss": "^1.1.0",
