@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-zendesk-garden"
-  spec.version       = "0.3.0"
+  spec.version       = "0.3.2"
   spec.authors       = ["Craig Day"]
   spec.email         = ["cday@zendesk.com"]
   spec.license       = "Apache-2.0"

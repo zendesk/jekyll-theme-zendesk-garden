@@ -29,7 +29,7 @@ By default the latest release of the theme will be used, but you can pin the the
 version using `@<version>`. For example:
 
 ```yaml
-remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.3.0
+remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.3.2
 ```
 
 #### Sidebar Navigation
