@@ -20,6 +20,15 @@ This is possible thanks to the following awesome libraries:
 Define a `_config.yml` file in your GitHub pages root directory and specify this remote theme:
 
 ```yaml
+remote_theme: zendesk/jekyll-theme-zendesk-garden
+```
+
+**Note:**
+
+By default the latest release of the theme will be used, but you can pin the theme to a specific
+version using `@<version>`. For example:
+
+```yaml
 remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.3.0
 ```
 
@@ -33,7 +42,7 @@ of `children` for nested navigation. There can only be one level of nesting.
 ##### Example
 
 ```yaml
-remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.3.0
+remote_theme: zendesk/jekyll-theme-zendesk-garden
 
 sidebar:
   - getting-started

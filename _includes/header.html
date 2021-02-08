@@ -1,6 +1,8 @@
 <header class="chrome:header">
   <div class="chrome:header_title">
-    <span class="text-3xl">{{ site.title }}</span>
+    <a href="{{ "/" | relative_url }}" class="text-grey-800 no-underline hover:no-underline focus:no-underline">
+      <span class="text-3xl">{{ site.title }}</span>
+    </a>
   </div>
   {% if site.search_enabled %} {% include search_input.html %} {% endif %}
 </header>
