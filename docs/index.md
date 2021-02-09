@@ -20,34 +20,10 @@ This is possible thanks to the following awesome libraries:
 Define a `_config.yml` file in your GitHub pages directory and specify this remote theme:
 
 ```yaml
-remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.3.2
+remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.4.0
 ```
 
 [Full Documentation](https://zendesk.github.io/jekyll-theme-zendesk-garden/)
-
-### As a Gem Theme
-
-#### Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "jekyll-theme-zendesk-garden"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: jekyll-theme-zendesk-garden
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-theme-zendesk-garden
 
 ## Contributing
 
