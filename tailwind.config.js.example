@@ -1,5 +1,4 @@
 module.exports = {
-  // plugins: [require('@zendeskgarden/tailwindcss')],
   theme: {
     colors: {
       black: '#000',
