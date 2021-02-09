@@ -1,5 +1,14 @@
+{%- capture version -%}
+{%- if site.version and site.version != "" -%}
+{{ site.version }}
+{%- elsif site.github.latest_release.tag_name -%}
+{{ site.github.latest_release.tag_name }}
+{%- elsif site.github.build_revision -%}
+{{ site.github.build_revision }}
+{%- endif -%}
+{%- endcapture -%}
 <footer class="chrome:footer">
-  {%- if site.version and site.version != "" -%}
+  {%- if site.version != false and version and version != "" -%}
   <div class="chrome:footer_item">
     <span class="text-lg">{{ site.version }}</span>
   </div>

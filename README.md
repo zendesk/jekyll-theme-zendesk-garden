@@ -22,7 +22,7 @@ However those have since been removed and any relevant CSS directly included.
 Define a `_config.yml` file in your GitHub pages directory and specify this remote theme:
 
 ```yaml
-remote_theme: zendesk/jekyll-theme-zendesk-garden@v0.4.0
+remote_theme: zendesk/jekyll-theme-zendesk-garden@main
 ```
 
 [Full Documentation](https://zendesk.github.io/jekyll-theme-zendesk-garden/)

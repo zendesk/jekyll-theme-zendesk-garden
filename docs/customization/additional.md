@@ -8,11 +8,21 @@ title: Additional Config
 The layout includes an updated timestamp in the footer by default, but can also include a version
 string.
 
-Set the `version` attribute in your `_config.yml` file and it's value will be displayed in the
-footer next to the updated timestamp.
+This will automatically pull the `tag_name` from the latest release of the repository on GitHub. If
+there is no latest release or tag name, then it will fall back to the `build_revision`, i.e. the
+git SHA, of the commit that triggered the page build.
+
+If you don't want this behavior, you can explicitly set the `version` attribute in your
+`_config.yml` file and it's value will be displayed in the footer next to the updated timestamp.
 
 ```yaml
 version: v1.2.3
+```
+
+If you don't want a version to be displayed at all, you can opt-out by setting `version` to `false.
+
+```yaml
+version: false
 ```
 
 ## Automatic Page Titles
