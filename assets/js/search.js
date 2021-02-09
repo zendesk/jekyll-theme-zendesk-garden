@@ -171,7 +171,6 @@ const buildResults = (results, docs) => {
 }
 
 z.onReady(() => {
-  console.log({{ site.github | jsonify }})
   document.getElementById('search').addEventListener('submit', submitSearch)
 
   if (window.location.pathname.includes('assets/html/search_results')) {
