@@ -8,10 +8,12 @@ search_enabled: true
 
 sidebar:
   - getting-started
-  - label: Recipes
+  - label: Customization
     children:
-      - cookies
-      - toast
+      - sidebar
+      - search
+      - version
+  - development
 
 highlighter: rouge
 markdown: kramdown

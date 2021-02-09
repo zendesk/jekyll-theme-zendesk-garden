@@ -1,5 +1,6 @@
 ---
 id: development
+title: Development
 ---
 
 ## Development

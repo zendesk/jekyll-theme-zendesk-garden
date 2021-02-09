@@ -11,7 +11,7 @@
         class="chrome:sidebar_item chrome:sidebar_item_collapsible chrome:sidebar_item_{{ collapsibleClass }}"
         onclick="toggleAccordian('{{ id }}')"
       >
-        {{ item.label }}
+        <span class="chrome:sidebar_item_text">{{ item.label }}</span>
         {% include collapsible_sidebar_icon.html %}
       </button>
       <div id="{{ accordian_id }}"
@@ -23,7 +23,7 @@
           {% else %}
             {% assign active_class = "" %}
           {% endif %}
-          <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item {{ active_class }} chrome:sidebar_item_child">
+          <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item text-sm {{ active_class }} chrome:sidebar_item_child">
             {{ meta.sidebar_label | default: meta.title }}
           </a>
         {% endfor %}
@@ -36,7 +36,7 @@
         {% assign active_class = "" %}
       {% endif %}
       <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item {{ active_class }}">
-        {{ meta.sidebar_label | default: meta.title }}
+        <span class="chrome:sidebar_item_text">{{ meta.sidebar_label | default: meta.title }}</span>
       </a>
     {% endif %}
   {% endfor %}
