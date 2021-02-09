@@ -3,6 +3,11 @@ id: additional-config
 title: Additional Config
 ---
 
+| Property                                    | Default                               |
+| ------------------------------------------- | ------------------------------------- |
+| [`version`](#version)                       | `site.github.latest_release.tag_name` |
+| [`auto_page_title`](#automatic-page-titles) | `false`                               |
+
 ## Version
 
 The layout includes an updated timestamp in the footer by default, but can also include a version

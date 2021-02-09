@@ -57,6 +57,28 @@ h6 {
   }
 }
 
+table {
+  @extend .w-full;
+}
+
+tbody tr:nth-child(even) {
+  @extend .bg-grey-100;
+}
+
+tr {
+  @extend .border-t;
+  @extend .border-b;
+  @extend .border-grey-300;
+}
+
+th,
+td {
+  @extend .border;
+  @extend .border-grey-300;
+  @extend .py-2;
+  @extend .px-3;
+}
+
 /* Add our custom styles here */
 
 body {
