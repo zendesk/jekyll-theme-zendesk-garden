@@ -1,3 +1,10 @@
 <div class="chrome:nav">
   <div class="chrome:logo_nav_item">{% include z.svg %}</div>
+  {% if site.github.repository_url %}
+  <div class="chrome:logo_nav_item" title="GitHub Repository">
+    <a href="{{ site.github.repository_url }}" target="_blank" rel="noreferrer noopener">
+      <img src="{{ '/assets/images/GitHub-Mark-Light-32px.png' | relative_url }}" alt="Link to GitHub Repository">
+    </a>
+  </div>
+  {% endif %}
 </div>
