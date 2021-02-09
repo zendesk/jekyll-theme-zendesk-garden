@@ -18,7 +18,7 @@ To reference a page at the sidebar root, directly use its `id` in the list of si
 
 #### Example
 
-**`getting_started.md`**
+##### `getting_started.md`
 
 ```
 ---
@@ -30,7 +30,7 @@ id: getting-started
 ...
 ```
 
-**`_config.yml`**
+##### `_config.yml`
 
 ```yaml
 sidebar:

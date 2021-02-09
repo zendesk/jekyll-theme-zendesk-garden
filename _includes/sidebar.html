@@ -18,6 +18,7 @@
         class="chrome:sidebar_item_accordian chrome:sidebar_item_accordian_{{ collapsibleClass }}">
         {% for child in item.children %}
           {% assign meta = site.pages | where: "id", child | first %}
+          {% if meta %}
           {% if page.id == meta.id %}
             {% assign active_class = "chrome:active_sidebar_item" %}
           {% else %}
@@ -26,10 +27,12 @@
           <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item text-sm {{ active_class }} chrome:sidebar_item_child">
             {{ meta.sidebar_label | default: meta.title }}
           </a>
+          {% endif %}
         {% endfor %}
       </div>
     {% else %}
       {% assign meta = site.pages | where: "id", item | first %}
+      {% if meta %}
       {% if page.id == meta.id %}
         {% assign active_class = "chrome:active_sidebar_item" %}
       {% else %}
@@ -38,6 +41,7 @@
       <a href="{{ meta.url | relative_url }}" class="chrome:sidebar_item {{ active_class }}">
         <span class="chrome:sidebar_item_text">{{ meta.sidebar_label | default: meta.title }}</span>
       </a>
+      {% endif %}
     {% endif %}
   {% endfor %}
 </div>

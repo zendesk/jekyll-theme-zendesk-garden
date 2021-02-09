@@ -3,8 +3,6 @@ id: development
 title: Development
 ---
 
-## Development
-
 To set up your environment to develop this theme, install Jekyll.
 
 ```

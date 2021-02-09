@@ -7,11 +7,13 @@ title: Zendesk Garden Jekyll Theme
 
 A Jekyll theme using Zendesk Garden design patterns.
 
-This is possible thanks to the following awesome libraries:
+This is was initially possible thanks to the following awesome libraries:
 
 - [`jekyll-postcss` plugin](https://github.com/mhanberg/jekyll-postcss)
 - [`tailwindcss` as a PostCSS plugin](https://tailwindcss.com/docs/installation#add-tailwind-as-a-post-css-plugin)
 - [zendeskgarden/tailwindcss](https://github.com/zendeskgarden/tailwindcss)
+
+However those have since been removed and any relevant CSS directly included.
 
 ## Usage
 

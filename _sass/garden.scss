@@ -2,27 +2,59 @@
 
 h1 {
   @extend .text-4xl;
-  @extend .my-4;
+  @extend .mb-6;
 }
 
 h2 {
   @extend .text-3xl;
-  @extend .my-3;
+  @extend .mt-6;
+  @extend .mb-2;
 }
 
 h3 {
   @extend .text-2xl;
-  @extend .my-2;
+  @extend .mt-6;
+  @extend .mb-2;
 }
 
 h4 {
   @extend .text-xl;
-  @extend .my-1;
+  @extend .mt-6;
+  @extend .mb-2;
 }
 
 h5 {
   @extend .text-lg;
-  @extend .my-px;
+  @extend .mt-4;
+  @extend .mb-2;
+}
+
+h6 {
+  @extend .font-semibold;
+  @extend .mt-4;
+  @extend .mb-2;
+}
+
+ol {
+  @extend .my-4;
+  @extend .pl-8;
+  @extend .list-decimal;
+}
+
+ul,
+ol {
+  @extend .space-y-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &:first-child {
+    @extend .mt-0;
+  }
 }
 
 /* Add our custom styles here */
@@ -213,12 +245,12 @@ ul {
   cursor: pointer;
   min-height: 30px;
   margin: 8px 0 0;
-}
 
-.chrome\:sidebar_item:hover {
-  @extend .text-grey-800;
-  @extend .no-underline;
-  background-color: rgba(0, 0, 0, 0.1);
+  &:hover {
+    @extend .text-grey-800;
+    @extend .no-underline;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 .chrome\:sidebar_item_text {

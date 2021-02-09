@@ -5,6 +5,7 @@ version: v0.4.0
 permalink: pretty
 
 search_enabled: true
+auto_page_title: true
 
 sidebar:
   - getting-started
@@ -12,7 +13,7 @@ sidebar:
     children:
       - sidebar
       - search
-      - version
+      - additional-config
   - development
 
 highlighter: rouge

@@ -5,6 +5,7 @@ version: v0.4.0
 baseurl: /jekyll-theme-zendesk-garden
 
 search_enabled: true
+auto_page_title: true
 
 sidebar:
   - getting-started
@@ -12,5 +13,5 @@ sidebar:
     children:
       - sidebar
       - search
-      - version
+      - additional-config
   - development
