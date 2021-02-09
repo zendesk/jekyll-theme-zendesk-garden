@@ -1,6 +1,5 @@
 title: Zendesk Garden Jekyll Theme
 remote_theme: zendesk/jekyll-theme-zendesk-garden@main
-version: v0.4.0
 
 baseurl: /jekyll-theme-zendesk-garden
 
