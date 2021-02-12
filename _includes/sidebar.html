@@ -1,7 +1,7 @@
 <div class="chrome:sidebar">
   {% for item in site.sidebar %}
     {% if item.children %}
-      {% capture id %}sidebar_item:-{{ item.label }}{% endcapture %}
+      {% capture id %}sidebar_item:{{ item.label | strip | downcase | remove: "'" | remove: '"' | escape }}{% endcapture %}
       {% capture accordian_id %}{{ id }}:accordian{% endcapture %}
       {% capture collapsibleClass %}
       {%- if item.children contains page.id -%}expanded{%- else -%}collapsed{%- endif -%}
