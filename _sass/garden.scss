@@ -88,10 +88,7 @@ body {
 
 a {
   @extend .text-blue-600;
-}
-
-a:hover {
-  @extend .underline;
+  @extend .hover\:underline;
 }
 
 code.highlighter-rouge {

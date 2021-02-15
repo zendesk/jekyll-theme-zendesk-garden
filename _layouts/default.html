@@ -12,6 +12,7 @@
       href="{{ '/assets/css/rouge.css' | relative_url }}"
     />
     <script src="{{ '/assets/js/accordian.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/heading_links.js' | relative_url }}"></script>
     {% if site.search_enabled %}
     <script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
@@ -27,7 +28,7 @@
           <div class="chrome:main">
             {% if site.auto_page_title and page.title %}
             {% if page.auto_title != false %}
-            <h1>{{ page.title }}</h1>
+            <h1 id="{{ page.title | replace: " ", "-" | downcase | url_encode }}">{{ page.title }}</h1>
             {% endif %}
             {% endif %}
             {{ content }}

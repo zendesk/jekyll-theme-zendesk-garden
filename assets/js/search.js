@@ -3,7 +3,7 @@ layout: bare
 ---
 (function(z) {
 
-z.onReady = (ready) => {
+z.onSearchReady = (ready) => {
   if (document.readyState != 'loading') {
     ready()
   } else {
@@ -170,7 +170,7 @@ const buildResults = (results, docs) => {
   })
 }
 
-z.onReady(() => {
+z.onSearchReady(() => {
   document.getElementById('search').addEventListener('submit', submitSearch)
 
   if (window.location.pathname.includes('assets/html/search_results')) {
