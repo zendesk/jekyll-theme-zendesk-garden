@@ -213,6 +213,7 @@ ul {
   @extend .border-r;
   @extend .border-solid;
   @extend .border-grey-200;
+  @extend .overflow-auto;
   width: 270px;
   padding: 28px;
 }
