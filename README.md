@@ -14,7 +14,7 @@ This is was initially possible thanks to the following awesome libraries:
 - [`tailwindcss` as a PostCSS plugin](https://tailwindcss.com/docs/installation#add-tailwind-as-a-post-css-plugin)
 - [zendeskgarden/tailwindcss](https://github.com/zendeskgarden/tailwindcss)
 
-However those have since been removed and any relevant CSS directly included.
+> Note: Those have since been removed and any relevant CSS directly included.
 
 ## Usage
 

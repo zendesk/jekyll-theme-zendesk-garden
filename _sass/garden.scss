@@ -43,7 +43,7 @@ ol {
 
 ul,
 ol {
-  @extend .space-y-4;
+  @extend .space-y-2;
 }
 
 h1,
@@ -91,6 +91,7 @@ a {
   @extend .hover\:underline;
 }
 
+/* Inline code styling */
 code.highlighter-rouge {
   background-color: #f8f8f8;
   @extend .px-2;
@@ -98,24 +99,35 @@ code.highlighter-rouge {
   @extend .rounded-sm;
 }
 
+/* block code styling */
+div.highlighter-rouge {
+  @extend .mb-4;
+}
+
 .highlight {
+  @extend .my-2;
   @extend .p-2;
   @extend .rounded;
 }
 
 p {
-  @extend .mt-4;
-}
-
-p:first-of-type {
-  @extend .mt-0;
+  @extend .mb-4;
 }
 
 ul {
   @extend .list-disc;
   @extend .list-inside;
   @extend .my-2;
+  @extend .mb-4;
   @extend .ml-4;
+}
+
+blockquote {
+  @extend .mb-4;
+  @extend .px-3;
+  @extend .border-l-4;
+  @extend .border-grey-400;
+  @extend .text-grey-600;
 }
 
 /* Chrome stylings */
