@@ -12,6 +12,7 @@ sidebar:
     children:
       - sidebar
       - search
+      - relative-nav
       - additional-config
   - development
 

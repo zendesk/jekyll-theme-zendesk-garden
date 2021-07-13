@@ -2,6 +2,7 @@
 id: sidebar
 title: Sidebar Navigation
 sidebar_label: Sidebar Nav
+next_page: search
 ---
 
 A navigation sidebar can be configured in your `_config.yml` by adding the `sidebar` property.

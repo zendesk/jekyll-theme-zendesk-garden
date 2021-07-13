@@ -32,6 +32,7 @@
             {% endif %}
             {% endif %}
             {{ content }}
+            {% if page.previous_page or page.next_page %} {% include page_nav.html %} {% endif %}
           </div>
           {% if site.sidebar %} {% include sidebar.html %} {% endif %}
         </div>

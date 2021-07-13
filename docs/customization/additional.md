@@ -1,6 +1,7 @@
 ---
 id: additional-config
 title: Additional Config
+previous_page: search
 ---
 
 | Property                                    | Default                               |

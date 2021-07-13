@@ -130,6 +130,41 @@ blockquote {
   @extend .text-grey-600;
 }
 
+.pagination {
+  @extend .flex;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .box-border;
+  @extend .text-grey-800;
+  padding: 0;
+  height: 50px;
+}
+
+.pagination_item {
+  @extend .inline-flex;
+  @extend .relative;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .order-1;
+  margin: 0 12px;
+  padding: 0 3px;
+  height: 30px;
+  min-width: 30px;
+}
+
+.pagination_gap {
+  @extend .inline-flex;
+  @extend .relative;
+  @extend .items-center;
+  @extend .justify-center;
+  @extend .order-1;
+  @extend .flex-grow;
+  margin: 0 12px;
+  padding: 0 3px;
+  height: 30px;
+  min-width: 30px;
+}
+
 /* Chrome stylings */
 .chrome {
   @extend .flex;

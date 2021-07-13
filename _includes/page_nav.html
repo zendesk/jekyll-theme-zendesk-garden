@@ -1,0 +1,29 @@
+<div class="pagination">
+  {% if page.previous_page %}
+  <div class="pagination_item">
+    {% assign meta = site.pages | where: "id", page.previous_page | first %}
+    {% if meta %}
+    <a href="{{ meta.url | relative_url }}" class="text-lg">
+      &lsaquo; {{ meta.sidebar_label | default: meta.title }}
+    </a>
+    {% endif %}
+  </div>
+  {% else %}
+  <div class="pagination_gap"></div>
+  {% endif %}
+  {% if page.previous_page and page.next_page %}
+  <div class="pagination_gap"></div>
+  {% endif %}
+  {% if page.next_page %}
+  <div class="pagination_item">
+    {% assign meta = site.pages | where: "id", page.next_page | first %}
+    {% if meta %}
+    <a href="{{ meta.url | relative_url }}" class="text-lg">
+      {{ meta.sidebar_label | default: meta.title }} &rsaquo;
+    </a>
+    {% endif %}
+  </div>
+  {% else %}
+  <div class="pagination_gap"></div>
+  {% endif %}
+</div>
