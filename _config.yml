@@ -6,6 +6,9 @@ permalink: pretty
 search_enabled: true
 auto_page_title: true
 
+mermaid_enabled: true
+mermaid_theme: forest
+
 sidebar:
   - getting-started
   - label: Customization

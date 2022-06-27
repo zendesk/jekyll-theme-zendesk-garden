@@ -8,6 +8,8 @@ previous_page: search
 | ------------------------------------------- | ------------------------------------- |
 | [`version`](#version)                       | `site.github.latest_release.tag_name` |
 | [`auto_page_title`](#automatic-page-titles) | `false`                               |
+| [`mermaid_enabled`](#mermaid-enabled)       | `true`                                |
+| [`meraid_theme`](#mermaid-theme)            | `forest`                              |
 
 ## Version
 
@@ -58,3 +60,20 @@ auto_title: false
 # My explicit title here
 
 ```
+
+# Mermaid
+This theme supports rendering of [MermaidJS](https://mermaid-js.github.io/) diagrams. It does so in a way that maintains compatibility with the native Mermaid diagram rendering in the Github UI. For example:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+## Disabling Mermaid Support {#mermaid-enabled}
+If you don't want to use Mermaid diagrams, you can set the `mermaid_enabled` option in your `_config.yml` file to `false`.
+
+## Customising the Mermaid theme {#mermaid-theme}
+Mermaid supports a number of default themes. This can be configured using the `mermaid_theme` option in your `_config.yml` file. Note that this theme must be supported in the [Mermaid configuration](https://mermaid-js.github.io/mermaid/#/./Setup?id=theme).
