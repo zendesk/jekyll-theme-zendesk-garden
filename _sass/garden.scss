@@ -101,6 +101,8 @@ code.highlighter-rouge {
 
 /* block code styling */
 div.highlighter-rouge {
+  word-break: break-all;
+  white-space: pre-line;
   @extend .mb-4;
 }
 
