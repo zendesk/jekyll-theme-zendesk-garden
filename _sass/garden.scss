@@ -58,6 +58,8 @@ h6 {
 }
 
 table {
+  word-break: break-all;
+  white-space: pre-line;
   @extend .w-full;
 }
 
