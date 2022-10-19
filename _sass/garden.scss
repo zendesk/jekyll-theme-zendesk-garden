@@ -203,6 +203,7 @@ blockquote {
   @extend .flex-shrink;
   @extend .order-1;
   flex-basis: 0%;
+  overflow: auto;
 }
 
 .chrome\:header {
