@@ -58,8 +58,8 @@ h6 {
 }
 
 table {
-  word-break: break-all;
-  white-space: pre-line;
+  word-break: break-word;
+  white-space: break-spaces;
   @extend .w-full;
 }
 
@@ -103,12 +103,12 @@ code.highlighter-rouge {
 
 /* block code styling */
 div.highlighter-rouge {
-  word-break: break-all;
-  white-space: pre-line;
   @extend .mb-4;
 }
 
 .highlight {
+  word-break: break-word;
+  white-space: break-spaces;
   @extend .my-2;
   @extend .p-2;
   @extend .rounded;
