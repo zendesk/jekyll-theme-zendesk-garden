@@ -40,11 +40,10 @@
       </div>
     </div>
     {% if site.mermaid_enabled != false %}
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>
-        let theme = "{{ site.mermaid_theme }}";
-        mermaid.initialize({ startOnLoad: true, theme });
-        window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: "{{ site.mermaid_theme }}" });
+        mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
     </script>
     {% endif %}
   </body>
